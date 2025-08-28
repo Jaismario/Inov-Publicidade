@@ -1,120 +1,146 @@
-/*
-******Limpar Formatações******
-*/
-*{
-    margin: 0 ;
-    padding: 0;
-}
-/*
-******Formatações genericas******
-*/
-body{
-    font-size:16px;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    background-color: #c4c4c4;
-}
-h1{
-    color: #252525;
-    font-size: 40px;
-}
-h2{
-    color: #0066cc;
-}
-h3{
-    color: #565656;
-    background: #cccccc;
-    padding: 5px;
-}
-/*
-******Header******
-*/
-#header{
-    background-color: #0066cc;
-    padding: 15px;
-    text-align:center;
-}
-#logo, #menu{
-    padding: 10px;
-}
-#header a:link, #header a:visited {
-    color: #ffffff;
-    padding: 8px 12px;
-}
-#header a:hover{
-color: #0066cc;
-background: #ffffff;
-text-decoration:none;}
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Seu Cupom Exclusivo</title>
+  
+  <!-- Fonte Montserrat -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet">
 
-.white{
-    color: #ffffff;
-}
-/*
-******Conteudo******
-*/
-#content{
-    width: 920px;
-    margin: 0 auto;
-    padding:15px;
-}
-#posts{
-    width: 660px;
-    float: left;
-}
-.post{
-    padding: 20px;
-    margin-bottom: 20px;
-    background-color: #ffffff;
-    text-align: justify;
-}
-.data-post{
-    font-size:13px;
-    border-bottom:1px solid #0066cc;
-    padding-bottom:10px;
-    margin-bottom:10px;
-    display: block;
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-}
-.img-post{
-    width: 620px;
-}
-/*
-******Right Side******
-*/
-#right-side{
-    width: 240px;
-    float:right;
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background: linear-gradient(135deg, #04CFA6, #1C201F);
+      color: #FFFFFF;
+      text-align: center;
+      padding: 40px 20px;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
 
-}
-.content-right{
-    background-color: #ffffff;
-    padding: 10px;
-    margin-bottom: 20px;
-}
-#post-right{
-    font-size: 13px;
-    padding: 5px;
-    border-bottom:1px dotted #cccccc ;
-}
-/*
-******Formatação Links******
-*/
-a{
-    text-decoration: none;
-}
-a:link, a:visited{
-    color: #0066cc;
-}
-a:hover{
-    text-decoration: underline;
-}
-/*
-******footer******
-*/
-#footer{
-    clear: both;
-    text-align: center;
-    padding: 15px;
-    background:#ffffff;
-    color:#0066cc;
+    header {
+      position: absolute;
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
 
-}
+    header img {
+      height: 80px;
+      width: auto;
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 15px;
+      text-shadow: 1px 1px 6px rgba(0,0,0,0.5);
+    }
+
+    p {
+      font-size: 1.1rem;
+      margin-bottom: 15px;
+    }
+
+    .cupom {
+      font-size: 28px;
+      font-weight: bold;
+      margin: 20px 0;
+      color: #04CFA6;
+      background: #FFFFFF;
+      color: #1C201F;
+      padding: 12px 25px;
+      border-radius: 10px;
+      display: inline-block;
+      letter-spacing: 2px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+
+    ol {
+      text-align: left;
+      display: inline-block;
+      margin: 20px 0;
+      font-size: 1rem;
+      line-height: 1.8;
+    }
+
+    .btn {
+      padding: 12px 25px;
+      background: #04CFA6;
+      color: #FFFFFF;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: all 0.3s ease;
+      display: inline-block;
+      margin-top: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+
+    .btn:hover {
+      background: #02a785;
+      transform: scale(1.05);
+    }
+
+    footer {
+      margin-top: 40px;
+      font-size: 0.9rem;
+      color: #ddd;
+    }
+
+    footer a {
+      color: #04CFA6;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="img/logo.png" alt="INOV Publicidade">
+  </header>
+
+  <main>
+    <h1>🎉 Parabéns, você ganhou um presente!</h1>
+    <p>Use este cupom exclusivo:</p>
+    <div class="cupom" id="cupom"></div>
+    <p>Para validar:</p>
+    <ol>
+      <li>Siga nossa página no Instagram.</li>
+      <li>Poste uma foto.</li>
+      <li>Marque nosso perfil.</li>
+    </ol>
+    <a class="btn" href="https://instagram.com/seuusuario" target="_blank">Seguir no Instagram</a>
+  </main>
+
+  <footer>
+    © 2025 INOV Publicidade - Desenvolvido com ❤  
+  </footer>
+
+  <script>
+    function gerarCupom() {
+      const prefixo = "PROMO-";
+      const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+      let codigo = "";
+      for (let i = 0; i < 5; i++) {
+        codigo += chars.charAt(Math.floor(Math.random() * chars.length));
+      }
+      return prefixo + codigo;
+    }
+    document.getElementById("cupom").textContent = gerarCupom();
+  </script>
+</body>
+</html>
