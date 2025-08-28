@@ -19,6 +19,7 @@
     <h1>🎉 Parabéns, você ganhou um presente!</h1>
     <p>Use este cupom exclusivo:</p>
     <div class="cupom" id="cupom"></div>
+    <button class="btn" onclick="copiarCupom()">📋 Copiar Cupom</button>
     <p>Para validar:</p>
     <ol>
       <li> Tire um print dessa tela e manda no whatsapp</li>
@@ -27,7 +28,10 @@
       <li>Marque nosso perfil.</li>
       <li>#INOVACAO</li>
     </ol>
-    <a class="btn" href="https://instagram.com/@inovpublicidade" target="_blank">Seguir no Instagram</a>
+    <a class="btn" href="https://instagram.com/inovpublicidade" target="_blank">Seguir no Instagram</a>
+    <a class="btn" href="https://wa.me/5599999999999?text=Olá!%20Ganhei%20um%20cupom%20exclusivo%20🎉" target="_blank" rel="noopener noreferrer">
+      💬 Enviar no WhatsApp
+    </a>
   </main>
 
   <!-- Rodapé -->
@@ -47,7 +51,14 @@
       return prefixo + codigo;
     }
     document.getElementById("cupom").textContent = gerarCupom();
+    
+    function copiarCupom() {
+      navigator.clipboard.writeText(cupom).then(() => {
+        alert("✅ Cupom copiado com sucesso!");
+      });
+    }
   </script>
 </body>
 </html>
+
 
