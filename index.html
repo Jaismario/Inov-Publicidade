@@ -4,24 +4,36 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Seu Cupom Exclusivo</title>
-  <style>
-    body { font-family: Arial, sans-serif; text-align: center; padding: 40px; }
-    .cupom { font-size: 24px; font-weight: bold; margin: 20px 0; color: #d32f2f; }
-    .btn { padding: 12px 20px; background: #1976d2; color: #fff; text-decoration: none; border-radius: 6px; }
-  </style>
+
+  <!-- Importando CSS externo -->
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>🎉 Parabéns, você ganhou um presente!</h1>
-  <p>Use este cupom exclusivo:</p>
-  <div class="cupom" id="cupom"></div>
-  <p>Para validar:</p>
-  <ol>
-    <li>Siga nossa página no Instagram.</li>
-    <li>Poste uma foto.</li>
-    <li>Marque nosso perfil.</li>
-  </ol>
-  <a class="btn" href="https://instagram.com/seuusuario" target="_blank">Seguir no Instagram</a>
+  <!-- Cabeçalho com logo -->
+  <header>
+    <img src="img/logo.png" alt="INOV Publicidade">
+  </header>
 
+  <!-- Conteúdo principal -->
+  <main>
+    <h1>🎉 Parabéns, você ganhou um presente!</h1>
+    <p>Use este cupom exclusivo:</p>
+    <div class="cupom" id="cupom"></div>
+    <p>Para validar:</p>
+    <ol>
+      <li>Siga nossa página no Instagram.</li>
+      <li>Poste uma foto.</li>
+      <li>Marque nosso perfil.</li>
+    </ol>
+    <a class="btn" href="https://instagram.com/seuusuario" target="_blank">Seguir no Instagram</a>
+  </main>
+
+  <!-- Rodapé -->
+  <footer>
+    © 2025 INOV Publicidade - Desenvolvido com ❤  
+  </footer>
+
+  <!-- Script para gerar cupom -->
   <script>
     function gerarCupom() {
       const prefixo = "PROMO-";
